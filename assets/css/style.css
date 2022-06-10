@@ -1,0 +1,43 @@
+body
+{
+    background-image: url("https://miro.medium.com/max/1400/1*kZW4nlRSLAMq0EA2EoKStg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+} 
+
+.pokeball-image
+{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.lives-score
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+    font-size: 36px;
+    text-align: center;
+    align-items: center;
+}
+
+.lives-group
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.hidden
+{
+    display: none;
+}
+
+.visible
+{
+    display: contents;
+}

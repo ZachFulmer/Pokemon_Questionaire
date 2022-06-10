@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Document</title>
+    <title>Pokemon Questionaire</title>
 </head>
 <body>
+    <div class = "lives-score">
+        <div class = "lives-group">
+            <p>Lives: </p>
+            <img id = "life-one" class = "pokeball-image" src = "./assets/images/pokeball-png.png" alt="pokeball representing one life"/>
+            <img id = "life-two" class = "pokeball-image" src = "./assets/images/pokeball-png.png" alt="pokeball representing second life"/>
+            <img id = "life-three" class = "pokeball-image" src = "./assets/images/pokeball-png.png" alt="pokeball representing third life"/>
+        </div>
+        <p>Score: </p> 
+    </div>
     <header>
         <h1>Who's That Pokemon</h1>
     </header>
 
+
     <!-- Intro -->
-    <div>
+    <div id="main-page" class="visible">
         <h2>So, you Think you are a pokemon Master?</h2>
         <button class="btn" id="test-your-skill">Test your Skill</button>
-        <img src="">
     </div>
 
     <!-- second screen with rules that should be hidden until test your skill <button> and re-hidden when start game <button> is press -->
-    <div class="hidden">
+    <div id="rules-page" class="hidden">
         <h1>Game Rules!</h1>
         <ul>
             <li>Take a guess of Pokémon given the hints</li>
@@ -31,11 +41,11 @@
             <li>something something something</li>
         </ul>
         <!-- float img right -->
-        <img src="">
+        <img src="./assets/images/prof_oak_homepage.png" alt="Professor Oak">
     </div>
 
     <!-- start of the game this section appears once start game is press -->
-    <div class="hidden">
+    <div id="game-start-page" class="hidden">
 
         <!-- Lives and score box -->
         <div>
@@ -51,10 +61,10 @@
             
             <!-- buttons portion of game -->
             <div>
-                <button class="btn" id="answer-1">Lucario</button>
-                <button class="btn" id="answer-2">Eevee</button>
-                <button class="btn" id="answer-3">Jigglypuff</button>
-                <button class="btn" id="answer-4">Snorlax</button>
+                <button class="btn button-primary" id="answer-1">Lucario</button>
+                <button class="btn button-primary" id="answer-2">Eevee</button>
+                <button class="btn button-primary" id="answer-3">Jigglypuff</button>
+                <button class="btn button-primary" id="answer-4">Snorlax</button>
             </div>
             <div class="hidden">
                 <!-- Give class hidden to the previous hint and show the next hint -->
@@ -64,7 +74,7 @@
     </div>
 
     <!-- Section where answer is selected -->
-    
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 </html>
