@@ -4,14 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="./assets/css/style.css">
-    <title>Travel Suggestions</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>Travel Suggestions</h1>
+        <h1>Who's That Pokemon</h1>
     </header>
+
+    <!-- Intro -->
+    <div>
+        <h2>So, you Think you are a pokemon Master?</h2>
+        <button class="btn" id="test-your-skill">Test your Skill</button>
+        <img src="">
+    </div>
+
+    <!-- second screen with rules that should be hidden until test your skill <button> and re-hidden when start game <button> is press -->
+    <div class="hidden">
+        <h1>Game Rules!</h1>
+        <ul>
+            <li>Take a guess of Pokémon given the hints</li>
+            <li>First hint is free; each requested hint is -3 points</li>
+            <li>Wrong answer is -10 points</li>
+            <li>Player will have 3 lives to earn as much points as the player can</li>
+            <li>something something something</li>
+            <li>something something something</li>
+        </ul>
+        <!-- float img right -->
+        <img src="">
+    </div>
+
+    <!-- start of the game this section appears once start game is press -->
+    <div class="hidden">
+
+        <!-- Lives and score box -->
+        <div>
+            <section class="live"></section>
+            <section class="score"></section>
+        </div>
+
+        <div>
+            <h1>Who's That pokemon</h1>
+            <h2 class="hint" id="hint-1">This Pokémon is known to have mischievous behavior.</h2>
+            <h2 class="hint" id="hint-2">It is best to avoid this Pokémon when it is singing.</h2>
+            <section class="card" id="card">Pokemon Card Goes here</section>
+            
+            <!-- buttons portion of game -->
+            <div>
+                <button class="btn" id="answer-1">Lucario</button>
+                <button class="btn" id="answer-2">Eevee</button>
+                <button class="btn" id="answer-3">Jigglypuff</button>
+                <button class="btn" id="answer-4">Snorlax</button>
+            </div>
+            <div class="hidden">
+                <!-- Give class hidden to the previous hint and show the next hint -->
+                <button class="give-hint" id="give-hint">New Hint?</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section where answer is selected -->
     
-    <script src = "assets/js/script.js"></script>
+
 </body>
 </html>
