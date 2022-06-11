@@ -9,23 +9,12 @@
     <title>Pokemon Questionaire</title>
 </head>
 <body>
-    <div class = "lives-score">
-        <div class = "lives-group">
-            <p>Lives: </p>
-            <img id = "life-one" class = "pokeball-image" src = "./assets/images/pokeball-png.png" alt="pokeball representing one life"/>
-            <img id = "life-two" class = "pokeball-image" src = "./assets/images/pokeball-png.png" alt="pokeball representing second life"/>
-            <img id = "life-three" class = "pokeball-image" src = "./assets/images/pokeball-png.png" alt="pokeball representing third life"/>
-        </div>
-        <p>Score: </p> 
-    </div>
-    <header>
-        <h1>Who's That Pokemon</h1>
-    </header>
 
 
     <!-- Intro -->
-    <div id="main-page" class="visible">
-        <h2>So, you Think you are a pokemon Master?</h2>
+    <div id="main-page" class="hidden">
+        <h1>Who's That Pokemon</h1>
+        <h3>So, you think you are a pokemon Master?</h3>
         <button class="btn" id="test-your-skill">Test your Skill</button>
     </div>
 
@@ -45,12 +34,17 @@
     </div>
 
     <!-- start of the game this section appears once start game is press -->
-    <div id="game-start-page" class="hidden">
+    <div id="game-start-page" class="visible">
 
         <!-- Lives and score box -->
-        <div>
-            <section class="live"></section>
-            <section class="score"></section>
+        <div class = "lives-score hidden">
+            <div class = "lives-group">
+                <p>Lives: </p>
+                <img id = "life-one" class = "pokeball-image" src = "./assets/images/pokeball-png.png" alt="pokeball representing one life"/>
+                <img id = "life-two" class = "pokeball-image" src = "./assets/images/pokeball-png.png" alt="pokeball representing second life"/>
+                <img id = "life-three" class = "pokeball-image" src = "./assets/images/pokeball-png.png" alt="pokeball representing third life"/>
+            </div>
+            <p>Score: </p> 
         </div>
 
         <div>

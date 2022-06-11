@@ -1,10 +1,20 @@
 body
 {
-    background-image: url("https://miro.medium.com/max/1400/1*kZW4nlRSLAMq0EA2EoKStg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-} 
+    width: 100%;
+    background-color: #f08700;
+    text-align: center;
+}
+
+#main-page h1
+{
+    margin-top: 20%;
+}
+
+#test-your-skill
+{
+    background-color: blue;
+    color: white;
+}
 
 .pokeball-image
 {
@@ -12,15 +22,12 @@ body
     height: 50px;
 }
 
-
-
 .lives-score
 {
     display: flex;
     justify-content: space-between;
     margin: 10px 20px;
     font-size: 36px;
-    text-align: center;
     align-items: center;
 }
 
@@ -28,7 +35,7 @@ body
 {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
 }
 
 
