@@ -76,6 +76,7 @@ var answerBtnHandler = function(event)
 var restartBtnHandler = function(event)
 {
     startGame();
+    resetRankings();
 };
 
 var game = 
@@ -368,13 +369,23 @@ var createRankingsEl = function() {
     rankingsArray.sort();
     rankingsArray.reverse();
     for (var i = 0; i < 10; i++) {
-        $("#top-ten").append("<li>" + rankingsArray[i] + "</li>");
+        if (rankingsArray[i] == null) {
+            $("#top-ten").append("<li class='ranking'> - - - </li>");
+        }
+
+        else{
+            $("#top-ten").append("<li class='ranking'>" + rankingsArray[i] + "</li>");
+        }
     }
 };
 
 var displayScoreboard = function () {
     saveScore();
     createRankingsEl();
+};
+
+var resetRankings = function () {
+    $("li").remove(".ranking");
 };
 
 var resetGameData = function()
