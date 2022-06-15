@@ -19,18 +19,25 @@
     </div>
 
     <!-- second screen with rules that should be hidden until test your skill <button> and re-hidden when start game <button> is press -->
-    <div id="rules-page" class="hidden">
-        <h1>Game Rules!</h1>
-        <ul>
-            <li>Take a guess of Pokémon given the hints</li>
-            <li>First hint is free; each requested hint is -3 points</li>
-            <li>Wrong answer is -10 points</li>
-            <li>Player will have 3 lives to earn as much points as the player can</li>
-            <li>something something something</li>
-            <li>something something something</li>
-        </ul>
+    <div class="container hidden" id="rule-page">
+      <div class="row rules-page">
+        <div class="u-pull-left">
+            <h1>Game Rules!</h1>
+            <ul class="rules">
+                <li>You will be given a Pokémon card to try and guess it's name.</li>
+                <li>You're given four possible answers to choose from.</li>
+                <li>Each incorrect answer results in losing a life.</li>
+                <li>For Each correct answer player is awarded 10 points.</li>
+                <li>The game ends when the player's lives reaches zero.</li>
+                <li>Objective of the game is to get the highest score possible.</li>
+            </ul>
+        </div>
+        <div id="oak" class="u-pull-right">
         <!-- float img right -->
-        <img src="./assets/images/prof_oak_homepage.png" alt="Professor Oak">
+        <img src="./assets/images/prof_oak_homepage.png" alt="Professor Oak" class="oak">
+        </div>
+      </div>
+      <button class="btn button-primary u-full-width" id="start-game">Start Game</button>  
     </div>
 
     <!-- start of the game this section appears once start game is press -->
@@ -61,7 +68,7 @@
                 <button class="btn button-primary" id="answer-4">Snorlax</button>
             </div>
             <div class="hidden">
-                <!-- Give class hidden to the previous hint and show the next hint -->
+                Give class hidden to the previous hint and show the next hint
                 <button class="give-hint" id="give-hint">New Hint?</button>
             </div>
         </div>
@@ -70,5 +77,6 @@
     <!-- Section where answer is selected -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/js/foundation.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
