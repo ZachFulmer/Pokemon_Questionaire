@@ -12,36 +12,37 @@
 
 
     <!-- Intro -->
-    <div id="main-page" class="hidden">
+    <div id="main-page" class="visible">
         <h1>Who's That Pokemon</h1>
         <h3>So, you think you are a pokemon Master?</h3>
         <button class="btn" id="test-your-skill">Test your Skill</button>
     </div>
 
     <!-- second screen with rules that should be hidden until test your skill <button> and re-hidden when start game <button> is press -->
-    <div class="container hidden" id="rule-page">
-      <div class="row rules-page">
-        <div class="u-pull-left">
+    <div class="hidden" id="rule-page">
+      <div class="rules-page">
+        <div>
             <h1>Game Rules!</h1>
             <ul class="rules">
                 <li>You will be given a Pokémon card to try and guess it's name.</li>
                 <li>You're given four possible answers to choose from.</li>
-                <li>Each incorrect answer results in losing a life.</li>
+                <li>Each incorrect answer results in losing a life and 10 points from your score.</li>
                 <li>For Each correct answer player is awarded 10 points.</li>
                 <li>The game ends when the player's lives reaches zero.</li>
                 <li>Objective of the game is to get the highest score possible.</li>
             </ul>
         </div>
-        <div id="oak" class="u-pull-right">
-        <!-- float img right -->
-        <img src="./assets/images/prof_oak_homepage.png" alt="Professor Oak" class="oak">
+        <div id="oak">
+            <!-- float img right -->
+            <img src="./assets/images/prof_oak_homepage.png" alt="Professor Oak" class="oak">
+            
         </div>
+        <button class="btn button-primary" id="start-game">Start Game</button>  
       </div>
-      <button class="btn button-primary u-full-width" id="start-game">Start Game</button>  
     </div>
 
     <!-- start of the game this section appears once start game is press -->
-    <div id="game-start-page" class="visible">
+    <div id="game-start-page" class="hidden">
 
         <!-- Lives and score box -->
         <div class = "lives-score">

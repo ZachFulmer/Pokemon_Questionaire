@@ -1,11 +1,34 @@
-var startButtonEl = document.querySelector("#start-game");
 var mainPage = document.querySelector("#main-page");
-var rulesPage = document.querySelector("#rules-page");
+var rulesPage = document.querySelector("#rule-page");
 var gameStartPage = document.querySelector("#game-start-page");
 var displayPokemonContainer = document.querySelector("#display-pokemon");
 var displayFactsGroup = document.querySelector("#fact-group");
 var leaderboardPage = document.querySelector("#leaderboard-page");
 var pokemonImageEl = document.querySelector("#pokemon-image");
+
+var rulesHandler = function(event)
+{
+    if(event.target.id == "test-your-skill")
+    {
+        mainPage.classList.replace("visible","hidden");
+        rulesPage.classList.replace("hidden","visible");
+        gameStartPage.classList.replace("visible","hidden");
+        leaderboardPage.classList.replace("visible","hidden");
+    }
+};
+
+var startGameHandler = function(event)
+{
+    if(event.target.id == "start-game")
+    {
+        mainPage.classList.replace("visible","hidden");
+        rulesPage.classList.replace("visible","hidden");
+        gameStartPage.classList.replace("hidden","visible");
+        leaderboardPage.classList.replace("visible","hidden");
+
+        startGame();
+    }
+};
 
 var answerBtnHandler = function(event)
 {
@@ -36,6 +59,8 @@ var answerBtnHandler = function(event)
                 $("#answer-4").removeClass("hidden");
 
                 displayPokemonContainer.style.backgroundColor = "#f08700";
+
+                displayScoreboard();
 
             }
             else
@@ -76,8 +101,8 @@ var answerBtnHandler = function(event)
 
 var restartBtnHandler = function(event)
 {
-    startGame();
     resetRankings();
+    startGame();
 };
 
 var game = 
@@ -421,6 +446,6 @@ var startGame = function()
 
 gameStartPage.addEventListener("click",answerBtnHandler);
 leaderboardPage.addEventListener("click",restartBtnHandler);
-startButtonEl.addEventListener("click", startGame);
-startGame();
+mainPage.addEventListener("click", rulesHandler);
+rulesPage.addEventListener("click", startGameHandler);
 
