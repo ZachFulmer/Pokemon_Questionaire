@@ -48,3 +48,19 @@ body
 {
     display: contents;
 }
+
+.container {
+    margin-top: 5%;
+    text-align: start;
+    padding: 3%;
+}
+
+.oak {
+    height: 400px;
+    margin-bottom: 30%;
+}
+
+.rules {
+    font-weight: bold;
+    font-size: 18px;
+}

@@ -1,3 +1,4 @@
+var startButtonEl = document.querySelector("#start-game");
 var mainPage = document.querySelector("#main-page");
 var rulesPage = document.querySelector("#rules-page");
 var gameStartPage = document.querySelector("#game-start-page");
@@ -380,5 +381,6 @@ var startGame = function()
 
 gameStartPage.addEventListener("click",answerBtnHandler);
 leaderboardPage.addEventListener("click",restartBtnHandler);
+startButtonEl.addEventListener("click", startGame);
 startGame();
 
