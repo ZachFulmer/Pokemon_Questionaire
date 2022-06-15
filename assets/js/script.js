@@ -37,6 +37,7 @@ var answerBtnHandler = function(event)
 
                 displayPokemonContainer.style.backgroundColor = "#f08700";
 
+                displayScoreboard();
             }
             else
             {
