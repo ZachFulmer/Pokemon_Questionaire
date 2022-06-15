@@ -69,12 +69,15 @@ var answerBtnHandler = function(event)
         $("#answer-4").removeClass("hidden");
 
         displayPokemonContainer.style.backgroundColor = "#f08700";
+
+        displayScoreboard();
     }
 };
 
 var restartBtnHandler = function(event)
 {
     startGame();
+    resetRankings();
 };
 
 var game = 
@@ -348,6 +351,43 @@ var displayAnswer = function(isCorrect)
 
 };
 
+var saveScore = function() {
+    if(localStorage.getItem("scores") === null){
+        var playerScores = [];
+        playerScores.push(game.userScore);
+        localStorage.setItem("scores", JSON.stringify(playerScores));
+    }
+    else {
+        playerScores = JSON.parse(localStorage.getItem("scores"));
+        playerScores.push(game.userScore);
+        localStorage.setItem("scores", JSON.stringify(playerScores));
+    }
+};
+
+var createRankingsEl = function() {
+    var savedRankings = localStorage.getItem("scores");
+    var rankingsArray = JSON.parse(localStorage.getItem("scores"));
+    rankingsArray.sort();
+    rankingsArray.reverse();
+    for (var i = 0; i < 10; i++) {
+        if (rankingsArray[i] == null) {
+            $("#top-ten").append("<li class='ranking'> - - - </li>");
+        }
+
+        else{
+            $("#top-ten").append("<li class='ranking'>" + rankingsArray[i] + "</li>");
+        }
+    }
+};
+
+var displayScoreboard = function () {
+    saveScore();
+    createRankingsEl();
+};
+
+var resetRankings = function () {
+    $("li").remove(".ranking");
+};
 
 var resetGameData = function()
 {
