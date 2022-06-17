@@ -100,8 +100,11 @@ var answerBtnHandler = function(event)
 
 var restartBtnHandler = function(event)
 {
-    resetRankings();
-    startGame();
+    if(event.target.id == "restartBtn")
+    {
+        resetRankings();
+        startGame();
+    }
 };
 
 var game = 
