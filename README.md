@@ -12,5 +12,7 @@ This project quizzes users on their knowledge of Pokemon and uses features such 
 * GitHub Repository - https://zachfulmer.github.io/Pokemon_Questionaire/
 * GitHub Pages - https://github.com/ZachFulmer/Pokemon_Questionaire
 
-## Screenshot
-![placeholder-screenshot](placeholder.png)
+## Usage
+Demo of PokeGuesser website <br>
+![Pokemon Questionaire](https://user-images.githubusercontent.com/101689362/187783151-34d141dc-1629-419a-a64d-552801c173b1.gif)
+
